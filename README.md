@@ -47,6 +47,9 @@ Formal email/message drafting
 All handled by a coordinated ecosystem of specialized agents for higher reliability and clarity.
 
 🏛️ Architecture
+<p align="center">
+  <img src="assets/workflow.png" width="640" height="360"/>
+</p>
 
 At the center of the system is the CampusLife Orchestrator, which coordinates an ecosystem of sub-agents. It manages:
 
