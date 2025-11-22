@@ -1,0 +1,28 @@
+# Core Google ADK dependencies
+google-generativeai
+google-ai-core
+
+# Async + server (optional for orchestrator or demo API)
+fastapi
+uvicorn
+
+# Data handling & utilities
+pandas
+numpy
+python-dotenv
+
+# Validation / typing
+pydantic
+
+# For notebooks
+ipykernel
+jupyter
+
+# Optional: visualization tools for demo notebook
+matplotlib
+
+# Logging & tracing
+loguru
+
+# For reading/writing JSON, YAML, structured data
+pyyaml
