@@ -1,4 +1,8 @@
 <p align="center"> CampusWell Agent</p>
+<p align="center">
+  <img src="assets/campuswelll.png" width="180" alt="CampusWell Logo"/>
+</p>
+
 <p align="center">A multi-agent welfare assistant for college students, built with Google’s Agent Development Kit (ADK)</p>  </p> <p align="center"> <img src="https://img.shields.io/badge/Python-3.10-blue" /> <img src="https://img.shields.io/badge/Google-ADK-green" /> <img src="https://img.shields.io/badge/Status-Prototype-yellow" /> <img src="https://img.shields.io/badge/License-MIT-lightgrey" /> </p>
 📘 Project Overview
 
