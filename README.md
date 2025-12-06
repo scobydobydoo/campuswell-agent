@@ -4,13 +4,13 @@
 </p>
 
 <p align="center">A multi-agent welfare assistant for college students, built with Google’s Agent Development Kit (ADK)</p>  </p> <p align="center"> <img src="https://img.shields.io/badge/Python-3.10-blue" /> <img src="https://img.shields.io/badge/Google-ADK-green" /> <img src="https://img.shields.io/badge/Status-Prototype-yellow" /> <img src="https://img.shields.io/badge/License-MIT-lightgrey" /> </p>
-📘 Project Overview
+ Project Overview
 
 CampusWell Agent is a multi-agent system designed to improve the academic and personal well-being of college students. Built with Google’s Agent Development Kit (ADK), it brings together specialized agents that streamline academic planning, reduce stress, guide financial decisions, and help students easily navigate campus resources.
 
 This project demonstrates multi-agent coordination, looping agents with validation, custom tools, memory usage, context engineering, and observability — all aligned with the Kaggle x Google Agents Intensive Capstone requirements.
 
-🎯 Problem Statement
+ Problem Statement
 
 College students face a wide range of challenges:
 
@@ -27,7 +27,7 @@ Confusion when navigating resources like labs, libraries, counseling, or placeme
 Most institutions lack a unified assistant capable of helping students manage academics + wellness + administrative tasks in one place.
 This leads to inefficiency, stress, and reduced academic consistency.
 
-💡 Solution Statement
+ Solution Statement
 
 CampusWell Agent provides a central AI companion that supports students across multiple domains.
 Instead of juggling dozens of portals or searching for help manually, students receive:
@@ -46,7 +46,7 @@ Formal email/message drafting
 
 All handled by a coordinated ecosystem of specialized agents for higher reliability and clarity.
 
-🏛️ Architecture
+ Architecture
 
 At the center of the system is the CampusLife Orchestrator, which coordinates an ecosystem of sub-agents. It manages:
 
@@ -62,7 +62,7 @@ Context engineering
 
 Observability hooks
 
-🤖 Sub-Agents
+ Sub-Agents
 1. Academic Planner Agent
 
 A LoopAgent that:
@@ -129,7 +129,7 @@ Club participation messages
 
 Simple resumes for college activities
 
-🧰 Tools & Utilities
+ Tools & Utilities
 Schedule Generator Tool
 
 Builds conflict-free study plans based on class timings and task lists.
@@ -158,7 +158,7 @@ RoutineValidationChecker
 
 Both ensure agent output quality using LoopAgent retry mechanics.
 
-🔍 Features Demonstrated 
+ Features Demonstrated 
 
 ✔ Multi-agent system with both sequential and parallel flows
 ✔ LoopAgents with custom validation
@@ -169,37 +169,21 @@ Both ensure agent output quality using LoopAgent retry mechanics.
 ✔ Evaluation using synthetic student cases
 ✔ Deployable structure with modular agents
 
-🚀 How to Run
+ How to Run
 1. Install dependencies
 pip install -r requirements.txt
 
 2. Run the sample orchestrator
 python main.py
 
-3. Try the demo notebook
-
-Open:
-
-notebooks/demo.ipynb
 
 
-It includes:
-
-Example conversations
-
-Outputs from each sub-agent
-
-Sample student profile inputs
-
-Visual workflow descriptions
-
-
-📄 License
+ License
 
 This project is released under the MIT License.
 Feel free to use, modify, and extend it.
 
-🙌 Acknowledgments
+ Acknowledgments
 
 Special thanks to the Google ADK team, Kaggle, and the community examples which inspired this project’s architecture and modular organization.
 
