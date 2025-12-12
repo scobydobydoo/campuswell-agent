@@ -2,8 +2,14 @@ from google.adk.agents import Agent
 from ..config import config
 
 wellbeing_agent = Agent(
-    name='WellbeingAgent',
+    name="WellbeingAgent",
     model=config.worker_model,
-    instruction="""You are a wellbeing coach. Based on {planner_output} provide short morning/evening routines and 3 stress techniques. Save to 'wellbeing_output'.""" ,
-    output_key='wellbeing_output',
+    instruction="""
+Using planner_output, create:
+- a morning routine
+- an evening routine
+- 3 stress-management techniques
+Save to wellbeing_output.
+""",
+    output_key="wellbeing_output",
 )
