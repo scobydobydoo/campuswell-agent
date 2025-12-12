@@ -8,17 +8,25 @@ from ..tools import parse_student_profile
 plan_tool = FunctionTool(parse_student_profile)
 
 planner_agent = Agent(
-    name='AcademicPlannerAgent',
+    name="AcademicPlannerAgent",
     model=config.worker_model,
-    instruction="""You are AcademicPlannerAgent. Given student profile text, produce a 7-day study plan with blocks and objectives. Return Markdown and set 'planner_output'.""" ,
+    instruction="""
+You are AcademicPlannerAgent.
+Using the student's raw_profile (from parse_student_profile tool),
+create a detailed 7-day structured study plan with time blocks,
+subject priorities, and goals. Save output to planner_output.
+""",
     tools=[plan_tool, google_search],
-    output_key='planner_output',
+    output_key="planner_output",
     after_agent_callback=suppress_output_callback,
 )
 
 robust_planner = LoopAgent(
-    name='robust_planner',
-    sub_agents=[planner_agent, PlanValidationChecker(name='plan_validation_checker')],
+    name="robust_planner",
+    sub_agents=[
+        planner_agent,
+        PlanValidationChecker(name="plan_validation_checker")
+    ],
     max_iterations=3,
     after_agent_callback=suppress_output_callback,
 )
