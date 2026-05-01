@@ -1,188 +1,176 @@
-<p align="center"> CampusWell Agent</p>
+# CampusWell Agent
+
 <p align="center">
   <img src="assets/campuswelll.png" width="180" alt="CampusWell Logo"/>
 </p>
 
-<p align="center">A multi-agent welfare assistant for college students, built with Google’s Agent Development Kit (ADK)</p>  </p> <p align="center"> <img src="https://img.shields.io/badge/Python-3.10-blue" /> <img src="https://img.shields.io/badge/Google-ADK-green" /> <img src="https://img.shields.io/badge/Status-Prototype-yellow" /> <img src="https://img.shields.io/badge/License-MIT-lightgrey" /> </p>
- Project Overview
+<p align="center">
+A multi-agent welfare assistant for college students, built with Google’s Agent Development Kit (ADK)
+</p>
 
-CampusWell Agent is a multi-agent system designed to improve the academic and personal well-being of college students. Built with Google’s Agent Development Kit (ADK), it brings together specialized agents that streamline academic planning, reduce stress, guide financial decisions, and help students easily navigate campus resources.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue" />
+  <img src="https://img.shields.io/badge/Google-ADK-green" />
+  <img src="https://img.shields.io/badge/System-Multi--Agent-yellow" />
+  <img src="https://img.shields.io/badge/Status-Prototype-orange" />
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey" />
+</p>
 
-This project demonstrates multi-agent coordination, looping agents with validation, custom tools, memory usage, context engineering, and observability — all aligned with the Kaggle x Google Agents Intensive Capstone requirements.
+---
 
- Problem Statement
+##  Hackathon Project
+
+This project was developed as part of the **Kaggle × Google Agents Intensive Capstone**, focusing on building real-world multi-agent systems using Google’s Agent Development Kit (ADK).
+
+The objective was to design a unified AI assistant capable of coordinating multiple specialized agents to support students across academic, personal, and administrative domains.
+
+---
+
+##  Project Overview
+
+CampusWell Agent is a multi-agent system designed to improve the academic and personal well-being of college students.
+
+It brings together specialized agents that:
+
+- streamline academic planning  
+- reduce stress and improve wellness  
+- guide financial decisions  
+- simplify navigation of campus resources  
+
+The system demonstrates practical multi-agent coordination, validation-driven workflows, and context-aware decision-making.
+
+---
+
+##  Problem Statement
 
 College students face a wide range of challenges:
 
-Overwhelming academic workload
+- Overwhelming academic workload  
+- Difficulty managing schedules and deadlines  
+- Limited clarity on financial processes (fees, scholarships, forms)  
+- Stress, burnout, and lack of structured wellness practices  
+- Difficulty navigating campus resources (labs, libraries, counseling, placements)  
 
-Difficulty managing schedules and deadlines
+Most institutions lack a unified assistant to manage academics, wellness, and administrative needs in one place—leading to inefficiency and increased stress.
 
-Limited clarity on financial processes (fees, forms, scholarships)
+---
 
-Stress, burnout, and lack of structured wellness practices
+##  Solution
 
-Confusion when navigating resources like labs, libraries, counseling, or placement offices
+CampusWell Agent provides a centralized AI assistant that supports students across multiple domains through coordinated agents.
 
-Most institutions lack a unified assistant capable of helping students manage academics + wellness + administrative tasks in one place.
-This leads to inefficiency, stress, and reduced academic consistency.
+It enables:
 
- Solution Statement
+- Personalized study schedules  
+- Structured task planning  
+- Wellness and stress management guidance  
+- Campus resource discovery  
+- Financial process assistance  
+- Automated email/message drafting  
 
-CampusWell Agent provides a central AI companion that supports students across multiple domains.
-Instead of juggling dozens of portals or searching for help manually, students receive:
+All handled through a collaborative ecosystem of agents for reliability and clarity.
 
-Personalized study schedules
+---
 
-Verified task breakdowns
+##  System Architecture
 
-Wellness routines
+At the core is the **CampusLife Orchestrator**, responsible for:
 
-Campus service guidance
+- managing session state  
+- maintaining long-term memory (MemoryBank)  
+- coordinating agent workflows  
+- handling context propagation  
+- enabling observability and logging  
 
-Financial process assistance
+---
 
-Formal email/message drafting
+##  Agents Overview
 
-All handled by a coordinated ecosystem of specialized agents for higher reliability and clarity.
+### 1. Academic Planner Agent
+- Generates study schedules  
+- Breaks tasks into smaller steps  
+- Validates plans using ScheduleValidationChecker  
+- Uses loop-based retries for optimal output  
 
- Architecture
+---
 
-At the center of the system is the CampusLife Orchestrator, which coordinates an ecosystem of sub-agents. It manages:
+### 2. Mental Wellbeing Agent
+- Provides stress management techniques  
+- Suggests break routines  
+- Tracks patterns for personalized recommendations  
 
-Session state
+---
 
-Long-term memory (MemoryBank)
+### 3. Financial Guidance Agent
+- Explains fees, scholarships, and deadlines  
+- Provides structured financial guidance  
+- Uses custom lookup tools  
 
-Agent delegation
+---
 
-Parallel and sequential workflows
+### 4. Campus Resource Navigator
+- Locates campus facilities and services  
+- Provides quick access to essential information  
+- Uses structured datasets and search tools  
 
-Context engineering
+---
 
-Observability hooks
+### 5. Message Writer Agent
+- Generates formal emails and requests  
+- Drafts academic and administrative communication  
+- Assists in resume and message creation  
 
- Sub-Agents
-1. Academic Planner Agent
+---
 
-A LoopAgent that:
+## 🛠️ Tools & Utilities
 
-Creates weekly or daily study schedules
+- **Schedule Generator Tool**  
+  Creates structured and conflict-free study plans  
 
-Breaks large tasks into manageable steps
+- **Campus Info Lookup Tool**  
+  Retrieves campus-related data  
 
-Validates plans with ScheduleValidationChecker
+- **Student Profile Memory Tool**  
+  Stores long-term user context:
+  - courses  
+  - preferences  
+  - stress patterns  
+  - goals  
 
-Retries automatically until a conflict-free schedule is produced
+- **Validation Checkers**  
+  - ScheduleValidationChecker  
+  - RoutineValidationChecker  
 
-2. Mental-Wellbeing Agent
+These ensure output quality through validation loops.
 
-Acts as a personal wellness coach, offering:
+---
 
-Short breathing routines
+##  Features
 
-Stress-reduction tips
+- Multi-agent system with coordinated workflows  
+- Loop-based validation and retry mechanisms  
+- Custom tool integration  
+- Long-term memory (MemoryBank)  
+- Context-aware reasoning  
+- Observability (logs, tracing, metrics stubs)  
+- Modular and scalable architecture  
 
-Study break plans
+---
 
-Recommendations based on historical stress patterns
+##  How to Run
 
-3. Financial Guidance Agent
-
-Helps students understand:
-
-Scholarship options
-
-Fee structures
-
-Deadlines
-
-Application steps
-
-Includes lookups via a custom campus financial directory tool.
-
-4. Campus Resource Navigator Agent
-
-Quickly locates:
-
-Library timings
-
-Counselor information
-
-Lab access hours
-
-Placement office details
-
-Academic department contacts
-
-Uses a custom search tool + optional external search integrations.
-
-5. Message Writer Agent
-
-Drafts:
-
-Formal emails to professors
-
-Extension requests
-
-Club participation messages
-
-Simple resumes for college activities
-
- Tools & Utilities
-Schedule Generator Tool
-
-Builds conflict-free study plans based on class timings and task lists.
-
-Campus Info Lookup Tool
-
-Searches through a structured dataset of campus resources.
-
-Student Profile Memory Tool
-
-Stores personalized long-term student details:
-
-Courses
-
-Preferred study style
-
-Stress patterns
-
-Academic goals
-
-Validation Checkers
-
-ScheduleValidationChecker
-
-RoutineValidationChecker
-
-Both ensure agent output quality using LoopAgent retry mechanics.
-
- Features Demonstrated 
-
-✔ Multi-agent system with both sequential and parallel flows
-✔ LoopAgents with custom validation
-✔ Multiple custom tools
-✔ Session management & MemoryBank
-✔ Context compaction
-✔ Observability (logs, trace IDs, metrics stubs)
-✔ Evaluation using synthetic student cases
-✔ Deployable structure with modular agents
-
- How to Run
-1. Install dependencies
+### 1. Install dependencies
+bash
 pip install -r requirements.txt
 
-2. Run the sample orchestrator
-python main.py
+---
 
-
-
- License
+## License
 
 This project is released under the MIT License.
 Feel free to use, modify, and extend it.
 
+---
  Acknowledgments
 
 Special thanks to the Google ADK team, Kaggle, and the community examples which inspired this project’s architecture and modular organization.
